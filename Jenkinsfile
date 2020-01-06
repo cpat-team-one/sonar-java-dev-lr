@@ -149,7 +149,7 @@ spec:
                 ./gradlew -Dsonar.login=${SONARQUBE_USER} -Dsonar.password=${SONARQUBE_PASSWORD} -Dsonar.host.url=${SONARQUBE_URL} sonarqube
                 '''
             }
-            stage("Quality Gate") {
+            stage('Quality Gate') {
              timeout(time: 1, unit: 'HOURS') {
                  waitForQualityGate abortPipeline: true
 }
